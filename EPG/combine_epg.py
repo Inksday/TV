@@ -97,5 +97,5 @@ combined_tree = ET.ElementTree(combined_root)
 with io.BytesIO() as buffer:
     combined_tree.write(buffer, encoding='utf-8', xml_declaration=True)
     buffer.seek(0)
-    with gzip.open('combined_output.xml.gz', 'wb') as f:
+    with gzip.open('DDL_EPG_COMBINED.xml.gz', 'wb') as f:
         f.write(buffer.read())
